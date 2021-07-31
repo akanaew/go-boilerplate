@@ -1,0 +1,25 @@
+basePath: /
+definitions:
+  handlers.WelcomeResponse:
+    properties:
+      message:
+        type: string
+    type: object
+host: localhost:8000
+info:
+  contact: {}
+  description: This is default RESTfulAPI boilerplate
+  title: Go Boilerplate
+  version: "1.0"
+paths:
+  /accounts:
+    get:
+      description: Default welcome endpoint
+      operationId: welcome-get
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/handlers.WelcomeResponse'
+      summary: Welcome
+swagger: "2.0"

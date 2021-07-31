@@ -3,6 +3,8 @@ package main
 import (
 	"github.com/joho/godotenv"
 	_ "github.com/lib/pq"
+	_ "go-boilerplate/docs"
+
 	"github.com/spf13/viper"
 	"go-boilerplate/internal/db"
 	"go-boilerplate/internal/handlers"
@@ -13,6 +15,11 @@ import (
 	"os"
 )
 
+// @title Go Boilerplate
+// @version 1.0
+// @description This is default RESTfulAPI boilerplate
+// @host localhost:8000
+// @basePath /
 func main() {
 	if err := initConfig(); err != nil {
 		log.Fatalf("error initialization configs %s", err.Error())
